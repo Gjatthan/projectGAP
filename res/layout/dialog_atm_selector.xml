@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:circularflow_angles="90"
+    android:layout_centerVertical="true"
+    app:cardElevation="3dp">
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radatmtype"
+        android:layout_margin="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find all nearby ATMs"
+            android:fontFamily="@font/hindkochisemi"
+            android:textColor="@color/teal_700"
+            android:padding="20dp"
+            android:id="@+id/radnearby"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find nearest ATM"
+            android:fontFamily="@font/hindkochisemi"
+            android:textColor="@color/teal_700"
+            android:padding="20dp"
+            android:id="@+id/radnearest"/>
+    </RadioGroup>
+</androidx.cardview.widget.CardView>

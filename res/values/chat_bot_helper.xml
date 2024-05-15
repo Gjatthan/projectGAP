@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="chat_bot_helper_list">
+        <item>How to get registered</item>
+        <item>How to make a payment</item>
+        <item>Customer service number</item>
+    </array>
+</resources>

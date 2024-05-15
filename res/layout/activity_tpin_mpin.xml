@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TpinMpin"
+    android:background="@drawable/newbg6"
+    android:orientation="vertical"
+    >
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="300dp">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="404dp"
+          android:src="@drawable/setpins"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.503"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/vanillaextractregular"
+          android:padding="20dp"
+          android:text="Set Pins"
+          android:textSize="35dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.459"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.076" />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter Login pin"
+          app:passwordToggleEnabled="true">
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fontFamily="@font/hindkochi"
+             android:maxLength="4"
+             android:inputType="numberPassword"
+             android:id="@+id/txtlpin"/>
+      </com.google.android.material.textfield.TextInputLayout>
+<!--      <ToggleButton-->
+<!--          android:layout_width="30dp"-->
+<!--          android:layout_height="30dp"-->
+<!--          android:layout_gravity="center_vertical"-->
+<!--          android:background="@drawable/eye"-->
+<!--          android:onClick="onClickShowHide"-->
+<!--          android:textOn=""-->
+<!--          android:textOff=""-->
+<!--          android:id="@+id/tblpin"-->
+<!--          android:layout_marginLeft="10dp"/>-->
+
+   </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="10dp">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Confirm"
+          app:passwordToggleEnabled="true">
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fontFamily="@font/hindkochi"
+             android:maxLength="4"
+             android:inputType="numberPassword"
+             android:id="@+id/txtlpinc"/>
+      </com.google.android.material.textfield.TextInputLayout>
+<!--      <ToggleButton-->
+<!--          android:layout_width="30dp"-->
+<!--          android:layout_height="30dp"-->
+<!--          android:layout_gravity="center_vertical"-->
+<!--          android:textOn=""-->
+<!--          android:textOff=""-->
+<!--          android:onClick="onClickShowHide"-->
+<!--          android:background="@drawable/eye"-->
+<!--          android:id="@+id/tblpinc"-->
+<!--          android:layout_marginLeft="10dp"/>-->
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="10dp">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter Transaction Pin"
+          app:passwordToggleEnabled="true">
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fontFamily="@font/hindkochi"
+             android:maxLength="4"
+             android:inputType="numberPassword"
+             android:id="@+id/txttpin"/>
+      </com.google.android.material.textfield.TextInputLayout>
+<!--      <ToggleButton-->
+<!--          android:layout_width="30dp"-->
+<!--          android:layout_height="30dp"-->
+<!--          android:background="@drawable/eye"-->
+<!--          android:layout_gravity="center_vertical"-->
+<!--          android:textOn=""-->
+<!--          android:textOff=""-->
+<!--          android:onClick="onClickShowHide"-->
+<!--          android:id="@+id/tbtpin"-->
+<!--          android:layout_marginLeft="10dp"/>-->
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="10dp">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Confirm"
+          app:passwordToggleEnabled="true">
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fontFamily="@font/hindkochi"
+             android:maxLength="4"
+             android:inputType="numberPassword"
+             android:id="@+id/txttpinc"/>
+      </com.google.android.material.textfield.TextInputLayout>
+<!--      <ToggleButton-->
+<!--          android:layout_width="30dp"-->
+<!--          android:layout_height="30dp"-->
+<!--          android:layout_gravity="center_vertical"-->
+<!--          android:background="@drawable/eye"-->
+<!--          android:onClick="onClickShowHide"-->
+<!--          android:textOn=""-->
+<!--          android:textOff=""-->
+<!--          android:id="@+id/tbtpinc"-->
+<!--          android:layout_marginLeft="10dp"/>-->
+
+   </LinearLayout>
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginTop="20dp"
+       android:text="Proceed"
+       android:textAllCaps="false"
+       android:onClick="onClickProceed"
+       android:background="@drawable/button_create_reg"
+       android:fontFamily="@font/vanillaextractregular"/>
+</LinearLayout>

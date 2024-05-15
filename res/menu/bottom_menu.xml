@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home"
+    android:icon="@drawable/ic_home_gif"
+    android:title="Home"/>
+    <item android:id="@+id/scaner"
+        android:icon="@drawable/ic_scan"
+        android:title="Pay"/>
+    <item android:id="@+id/scaner"
+        android:icon="@drawable/ic_scan"
+        android:title="Pay"/>
+    <item android:id="@+id/home4"
+        android:icon="@drawable/secure"
+        android:title="Home"/>
+</menu>

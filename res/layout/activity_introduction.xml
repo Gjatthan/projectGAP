@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introduction"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        android:layout_marginLeft="300dp"
+        android:id="@+id/btn_skip"
+        android:textColor="@color/basic_color"
+        android:onClick="onClickIntro"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/viewPager"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/btn_skip"
+        android:backgroundTint="#ffffff">
+    </androidx.viewpager2.widget.ViewPager2>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/intro_btn_prev"
+        android:layout_below="@id/viewPager"
+        android:text="Previous"
+        android:fontFamily="@font/hindkochi"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/registration_box"
+        android:textColor="@color/basic_color"
+        android:onClick="onClickIntro"/>
+
+    <Button
+        android:id="@+id/intro_btn_next"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPager"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/intro_btn_prev"
+        android:background="@drawable/registration_box"
+        android:fontFamily="@font/hindkochi"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/basic_color"
+        android:onClick="onClickIntro"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Registered"
+        android:fontFamily="@font/hindkochisemi"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_getregistered"
+        android:textColor="@color/white"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:id="@+id/intro_btn_reg"
+        android:visibility="gone"
+        android:layout_marginTop="570dp"
+        android:layout_marginLeft="100dp"
+        android:onClick="onClickGetStart"
+        android:gravity="center"/>
+
+
+
+</RelativeLayout>

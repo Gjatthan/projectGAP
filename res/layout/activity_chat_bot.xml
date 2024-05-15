@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbg2"
+    tools:context=".ChatBot">
+
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_container"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Spinner
+                android:id="@+id/helpspiner"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/chat_container"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="37dp"
+                android:layout_weight=".3"
+                android:entries="@array/chat_bot_helper_list"
+                android:paddingLeft="20dp"
+                android:background="@drawable/carddetailsbox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="55dp"-->
+            <!--            app:cardCornerRadius="20dp"-->
+            <!--            android:layout_weight="1.7">-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/btnsend"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_weight="1.7"
+                android:cropToPadding="true"
+                android:onClick="onClickChatSend"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/msg_send2" />
+
+            <!--        </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

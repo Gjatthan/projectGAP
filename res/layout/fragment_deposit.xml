@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".fragment_loan">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RadioGroup
+        android:id="@+id/radgrpfrgmnt"
+        android:layout_width="319dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:checkedButton="@id/radpersonal"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/transparent">
+
+        <RadioButton
+            android:id="@+id/radpersonal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_calcy_rad_selector"
+            android:button="@color/orange"
+            android:elevation="20dp"
+            android:fontFamily="@font/hindkochisemi"
+            android:gravity="center"
+            android:text="RD"
+            android:textColor="@drawable/fragment_calcy_text_color" />
+
+        <RadioButton
+            android:id="@+id/radhousing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_calcy_rad_selector"
+            android:button="@color/orange"
+            android:elevation="20dp"
+            android:fontFamily="@font/hindkochisemi"
+            android:gravity="center"
+            android:text="FD"
+            android:textColor="@drawable/fragment_calcy_text_color" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:focusedByDefault="true"
+        android:textColorHint="@color/teal_200"
+        app:boxBackgroundMode="outline"
+        app:hintTextColor="@color/teal_200"
+        app:prefixText="₹"
+        app:prefixTextColor="@color/teal_700">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtamt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/hindkochi"
+            android:gravity="center_vertical"
+            android:hint="Enter amount"
+            android:inputType="number"
+            android:textColor="@color/orange"
+
+            android:textColorHighlight="@color/teal_700"
+            android:textColorHint="@color/teal_700" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <SeekBar
+        android:id="@+id/amtseekbar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="307dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:fadeScrollbars="true"
+        android:max="200000"
+        android:progress="50000"
+        android:thumb="@drawable/rupeesic2"
+        app:tickMarkTint="#8C4A4A"
+        app:tickMarkTintMode="add"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:weightSum="3"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/btnmin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            android:background="@drawable/fragment_intrest_min_button"
+            android:fontFamily="@font/hindkochibold"
+            android:onClick="onClickMinMax"
+            android:text="-"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2.7"
+            android:background="@drawable/fragment_loan_tenure_stroke"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:fontFamily="@font/hindkochi"
+                android:text="Interest Rate"
+                android:textAlignment="center"
+                android:textColor="@color/teal_200"
+                android:textSize="10dp" />
+
+            <EditText
+                android:id="@+id/txtinterest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/hindkochi"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="1"
+                android:textColor="@color/orange"
+                android:textColorHighlight="@color/black"
+                android:textColorLink="@color/black"
+                android:textSize="12dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/btnmax"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            android:background="@drawable/fragment_intrest_max_button"
+            android:fontFamily="@font/hindkochibold"
+            android:onClick="onClickMinMax"
+            android:text="+"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:background="@drawable/fragment_loan_tenure_stroke">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Investment Tenure"
+                android:fontFamily="@font/hindkochisemi"
+                android:textColor="@color/teal_200"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/orange"
+                android:inputType="number"
+                android:text="1"
+                android:id="@+id/txttenure"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spintenure"
+            android:entries="@array/tenure"
+            android:background="@drawable/fragment_intrest_max_button"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fragment_calcy_rad_selected"
+        android:fontFamily="@font/hindkochisemi"
+        android:id="@+id/btncalculate"
+        android:padding="5dp"
+        android:text="Calculate"
+        android:textColor="@color/white" />
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/fragment_card_view"
+        android:visibility="invisible"
+        android:id="@+id/layoutloandetail"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emiicon"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="EMI Amount "
+                android:gravity="left"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/orange"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtemi"
+                android:gravity="right"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/button"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emiicon"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Interest"
+                android:gravity="left"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/orange"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtiamt"
+                android:gravity="right"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/button"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/totalpay"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Total Amount Payable"
+                android:gravity="left"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/orange"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txttotal"
+                android:gravity="right"
+                android:fontFamily="@font/hindkochi"
+                android:textColor="@color/button"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="View More"
+            android:textColor="@color/purple_200"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/viewmore"/>
+    </LinearLayout>
+
+</LinearLayout>

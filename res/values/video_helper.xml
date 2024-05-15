@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="suggestions">
+        <item>How can I login</item>
+        <item>How to register with GAP</item>
+        <item>How transfer money</item>
+    </array>
+</resources>

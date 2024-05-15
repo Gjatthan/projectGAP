@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment_QR"
+    android:orientation="vertical">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/radiocalgrp"
+        android:checkedButton="@id/radioloan">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/radioloan"
+            android:layout_height="60dp"
+            android:text="Scan QR"
+            android:textColor="@drawable/calcy_text_color"
+            android:button="@color/transparent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:elevation="20dp"
+            android:background="@drawable/calcy_radio_selector"
+            android:fontFamily="@font/hindkochibold"
+            android:onClick="onClickScanQr"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="My QR"
+            android:id="@+id/radio_depo"
+            android:layout_weight="1"
+            android:fontFamily="@font/hindkochibold"
+            android:textColor="@drawable/calcy_text_color"
+            android:button="@color/transparent"
+            android:gravity="center"
+            android:elevation="20dp"
+            android:background="@drawable/calcy_radio_selector"
+            android:onClick="onClick"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/qr"/>
+
+</LinearLayout>

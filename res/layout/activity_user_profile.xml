@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    android:orientation="vertical"
+    android:background="@drawable/newbg1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back_arrow"
+            android:id="@+id/btnback"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:fontFamily="@font/hindkochisemi"
+            android:textAllCaps="false"
+            android:background="@color/transparent"
+            android:textColor="@color/basic_color"
+            android:layout_gravity="right"
+            android:layout_marginLeft="280dp"
+            android:onClick="onClickSave"
+            android:visibility="gone"
+            android:id="@+id/btnsave"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center">
+
+        <!--<pl.droidsonroids.gif.GifImageView
+            android:layout_width="47dp"
+            android:layout_height="42dp"
+            android:onClick="onClickChangeImage"
+            android:src="@drawable/ic_cam2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/basic_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:fontFamily="@font/hindkochisemi"
+            android:gravity="bottom|center"
+            android:onClick="onClickEditProfile"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iviewCard"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            android:background="@color/teal_700"
+            app:layout_constraintCircleRadius="@dimen/default_pressed_glow_size">
+            <ImageView
+                android:id="@+id/imageViewUProfile"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/user"
+                android:onClick="onClickProfile"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/hindkochibold"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtname"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:onClick="cardZoom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:fontFamily="@font/hindkochisemi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_phone"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123456789"
+            android:fontFamily="@font/hindkochi"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:paddingLeft="50dp"
+            android:id="@+id/txtphone"/>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Change"-->
+<!--            android:textColor="@color/basic_color"-->
+<!--            android:background="@drawable/card_home"-->
+<!--            android:layout_marginLeft="250dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:fontFamily="@font/hindkochi"-->
+<!--            android:textSize="12dp"/>-->
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="cardZoom"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email ID"
+            android:fontFamily="@font/hindkochisemi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_email"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="gjatthan@gmail.com"
+            android:fontFamily="@font/hindkochi"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:paddingLeft="50dp"
+            android:id="@+id/txtemail"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:onClick="cardZoom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:fontFamily="@font/hindkochisemi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_gender"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:fontFamily="@font/hindkochi"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:paddingLeft="50dp"
+            android:id="@+id/txtgender"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="cardZoom"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nationality"
+            android:fontFamily="@font/hindkochisemi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_country"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indian"
+            android:fontFamily="@font/hindkochi"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:paddingLeft="50dp" />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:onClick="cardZoom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Permanent Address"
+            android:fontFamily="@font/hindkochisemi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"/>
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_adrs"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laxminagar garde 5th cross \nGarde House Udupi"
+            android:fontFamily="@font/hindkochi"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:paddingLeft="50dp"
+            android:id="@+id/txtadrs"/>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="De-Register"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAllCaps="false"
+        android:background="@color/transparent1"
+        android:fontFamily="@font/hindkochisemi"
+        android:textColor="@color/teal_700"
+        android:onClick="onClickDeregister"/>
+
+</LinearLayout>

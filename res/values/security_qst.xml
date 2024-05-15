@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="sec_qst">
+        <item>What is the result of 2+2?</item>
+        <item>Which is the 2 digit
+            maximum number?</item>
+        <item>What is the result of 2x4x0?</item>
+    </array>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationCard"
+    android:background="@drawable/newbg4"
+    android:orientation="vertical"
+    android:theme="@style/Material3Theme">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/vanillaextractregular"
+        android:padding="20dp"
+        android:text="Enter your card details"
+        android:textSize="24dp"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="129dp"
+        android:layout_height="115dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/payment"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/hindkochi"
+            android:hint="Enter card number"
+            android:maxLength="19"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:textSize="20dp"
+            android:id="@+id/txtcardnum"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/hindkochi"
+            android:hint="Enter card validity"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:textSize="20dp"
+            android:id="@+id/txtcardvalid"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/hindkochi"
+            android:hint="Enter card pin"
+            android:maxLength="4"
+            android:inputType="numberPassword"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:textSize="20dp"
+            android:id="@+id/txtcardpin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--             android:layout_marginLeft="25dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:id="@+id/txtsecqst"-->
+<!--            android:fontFamily="@font/hindkochisemi"-->
+<!--            android:text="What is the result of 2+2 ?"-->
+<!--            android:textSize="20dp"-->
+<!--            android:paddingTop="10dp"-->
+<!--            />-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/spinner_qst"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:minWidth="30dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/hindkochi"
+            android:paddingBottom="5dp"
+            android:maxWidth="40dp"
+            android:maxLength="2"
+            android:layout_weight="1.5"
+            android:id="@+id/txtsecans"
+            android:textSize="20dp"
+            android:gravity="center|center_vertical"
+            android:background="@drawable/carddetailsbox"
+            />
+
+<!--        <Button-->
+<!--            android:layout_width="16dp"-->
+<!--            android:layout_height="18dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:background="@drawable/refresh"-->
+<!--            android:gravity="center|center_vertical"-->
+<!--            android:onClick="onClickRefresh" />-->
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:fontFamily="@font/hindkochibold"
+        android:background="@drawable/button_round"
+        android:textAllCaps="false"
+        android:onClick="onClickRegister"/>
+
+
+</LinearLayout>
